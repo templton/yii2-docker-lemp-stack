@@ -1,1 +1,3 @@
-# yii2-nginx-mysql-phpmyadmin
+Общая сборка для проектов yii
+
+Пока что папка web от yii лежит прямо в корне
