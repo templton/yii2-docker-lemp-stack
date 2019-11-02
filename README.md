@@ -13,7 +13,7 @@
 
 Nginx домен для примера настроен megaparser.ru, поэтому
 
-sudo nano /etc/hosts
+*sudo nano /etc/hosts*
 
 Добавить 
 ```
