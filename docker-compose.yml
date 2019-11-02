@@ -54,9 +54,9 @@ services:
       - .env
     restart: unless-stopped
     tty: true
-    working_dir: /var/www/megaparser
+    working_dir: /var/www/
     volumes:
-      - ./:/var/www/megaparser/public_html
+      - ./project_code:/var/www/megaparser/public_html
     depends_on:
       - mysql
     ports:
@@ -75,7 +75,7 @@ services:
      restart: unless-stopped
      tty: true
      volumes:
-       - ./:/var/www/megaparser/public_html
+       - ./project_code:/var/www/megaparser/public_html
      depends_on:
        - php-fpm
      ports:
