@@ -45,3 +45,11 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xd0 in position 11: ordinal
 ```
 docker-compose up --build
 ```
+
+Exception 'yii\db\Exception' with message 'could not find driver' и прочие ошибки при работе в консоли - все консольные команды надо запускать внутри контейнера php-fpm
+
+```
+docker exec -it container_id sh
+```
+
+Далее переходим в папку проекта и работаем в консольном режиме
