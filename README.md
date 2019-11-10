@@ -38,3 +38,10 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xd0 in position 11: ordinal
  ```
  docker rm $(docker ps -a -q)
  ```
+
+
+Если внес изменения в имя домена и появилось file not found, то пересобрать образ
+
+```
+docker-compose up --build
+```
