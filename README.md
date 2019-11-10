@@ -26,3 +26,15 @@ Nginx домен для примера настроен megaparser.ru, поэт�
 ```
 UnicodeDecodeError: 'ascii' codec can't decode byte 0xd0 in position 11: ordinal not in range(128)
 ```
+Если ругается, что контейнеры уже имеются, то:
+
+Остановить все контейнеры:
+
+```
+ docker stop $(docker ps -a -q)
+ ```
+ 
+ Удалить все контейнеры
+ ```
+ docker rm $(docker ps -a -q)
+ ```
