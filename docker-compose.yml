@@ -4,7 +4,6 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: project-phpmyadmin
     env_file:
       - .env
     ports:
@@ -26,7 +25,6 @@ services:
   mysql:
     env_file:
       - .env
-    container_name: project-mysql
     image: mysql:5.7
     command: --sql_mode=""
     environment:
@@ -46,7 +44,6 @@ services:
       - project-net
 
   php-fpm:
-    container_name: project-net
     build:
       context: ./
       dockerfile: docker/php-fpm/Dockerfile
@@ -69,7 +66,6 @@ services:
      build:
        context: ./
        dockerfile: docker/nginx/Dockerfile
-     container_name: nginx
      env_file:
        - .env
      restart: unless-stopped
